@@ -32,26 +32,26 @@ Copyright (c) 2017, HatioLab Inc. All right reserved.
 		<style>
 			:host {
 				display: block;
-				@apply(--layout-vertical);
-				@apply(--layout-flex);
+				@apply --layout-vertical;
+				@apply --layout-flex;
 			}
 			.subtitle:before {
 				content: '';
-				@apply(--things-subtitle-icon);
+				@apply --things-subtitle-icon;
 			}
 			.subtitle {
-				@apply(--things-default-padding);
+				@apply --things-default-padding;
 				padding-bottom:7px;
-				@apply(--things-subtitle);
+				@apply --things-subtitle;
 			}
 			things-resource-grid {
-				@apply(--layout-flex);
+				@apply --layout-flex;
 			}
 			.things-resource-grid-main {
-				@apply(--layout-flex-1);
+				@apply --layout-flex-1;
 			}
 			.things-resource-grid-sub {
-				@apply(--layout-flex-1);
+				@apply --layout-flex-1;
 			}
 			paper-dialog {
 				position: fixed;
@@ -60,8 +60,8 @@ Copyright (c) 2017, HatioLab Inc. All right reserved.
 				left: 15%;
 				right: 15%;
 				margin: 0px;
-				@apply(--layout-flex);
-				@apply(--layout-vertical);
+				@apply --layout-flex;
+				@apply --layout-vertical;
 			}
 			paper-dialog::shadow .toolbar-tools.paper-toolbar {
 				padding:0
@@ -73,25 +73,31 @@ Copyright (c) 2017, HatioLab Inc. All right reserved.
 				background-color:var(--things-primary-background-color);
 				height:45px;
 				margin-top:0px !important;
-				@apply(--things-padding-clear)
+				@apply --things-padding-clear
 			}
 			paper-toolbar .title {
 				margin-left:32px !important;
 				line-height:initial !important;
 			}
 			.close-btn {
-				@apply(--things-header-button);
+				@apply --things-header-button;
 				background:url(/images/icon-close.png) 100% 50% no-repeat;
 				margin-right:10px;
 			}
 			.bottom-bar {
-				@apply(--layout-horizontal);
-				@apply(--layout-end-justified);
+				@apply --layout-horizontal;
+				@apply --layout-end-justified;
 				background-color:transparent;
 				margin-bottom:5px;
 				float:right;
 				margin-right:9px;
 			}
+			span.subtitle+things-resource-grid, span.subtitle+div things-resource-grid{
+				padding-top:0 !important
+			} 
+			span.subtitle{
+       			padding-bottom:4px !important
+     		}
 		</style>
 
 		<things-ajax
