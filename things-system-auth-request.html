@@ -333,7 +333,13 @@ things-system-auth-request
                     title: Things.DataGlobal.t('text.processed'),
                     text: Things.DataGlobal.t('text.processed_msg')
                 })
-            }
+            },
+            attached: function() {
+				// paper-toolbar의 bottomBar내의 button 우측으로 옮기기
+				var findBarRoot = this.$$('paper-toolbar');
+				var bottomBarRoot = findBarRoot.$.bottomBar;
+				bottomBarRoot.style['-webkit-justify-content'] = 'flex-end';
+     		}		
         })
     </script>
 </dom-module>
